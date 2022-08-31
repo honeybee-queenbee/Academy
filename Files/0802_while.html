@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const ar = [10, 20, 30, 40, 50];
+
+        // // 배열의 첨부터 끝까지 콘솔로그로 찍는코드.
+        // for(let i = 0; i < ar.length; i++)
+        // {
+        //     console.log(ar[i]);
+        //     //i를 readonly 또는 index로만 쓰는 경우 ok (순회용)
+
+        // }
+
+        
+        // 배열의 첨부터 끝까지 콘솔로그로 찍는코드.
+        for(let i = 0; i < ar.length; i++)
+        {
+            if(ar[i] === 99)
+            {
+                continue;
+            }
+            else
+            {
+                console.log(ar[i]);
+            }
+
+        }
+
+        /*
+        let n = 0;
+        while(n < 5)
+        {
+            console.log(ar[n]);
+            n++;
+        }
+
+        
+        let a = 0;
+        while (a < 9)
+        {
+            console.log(a);
+            a++;
+        }
+
+        for(let i = 0; i < 9; i++) // 위 while문과 같은 코드
+        {
+            console.log(a);
+        }
+        */
+
+
+    </script>
+</body>
+</html>

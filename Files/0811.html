@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+   
+            // 1. div element 2개를 가지고온다.
+            const divElements = document.querySelectorAll('div');
+            const tags = ['Hello', 'World'];
+
+            // 2.
+            divElements.forEach((element, index)=>{
+                if (index >= contents.length)
+                    return;
+
+                element.innerHTML = `<h1>${contents[index]}</h1>`;
+                
+            });
+
+
+
+        });
+
+            // 2. 각각에 element에 hello, world를 넣어준다.
+
+
+
+    </script>
+</head>
+<body>
+    <div></div>
+    <div></div>
+</body>
+</html>

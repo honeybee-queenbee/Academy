@@ -1,0 +1,11 @@
+@charset 'utf-8';
+
+h1{
+    font-size: 2rem;
+    color: red;
+}
+
+.hello2{
+    border: 1px solid aqua;
+    padding: 5px;
+}

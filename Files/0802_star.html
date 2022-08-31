@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 6을 곱하는 것은 스킵!
+        // let dan = 2;
+        // let mul = 1;
+        // for (let i =0; i < 9; i++, mul++)
+        // {
+        //     if (mul === 6)
+        //     {
+        //         continue;
+        //     }
+
+        //     console.log(`${dan} x ${mul} = ${dan*mul}`);
+
+        // }
+
+
+        // 별찍기 연습문제
+        // let star = '*' ;
+        // for (let i = 0; i < 10; i++)
+        // {
+        //     for (let j = 0; j <= i; j++)
+        //     {
+        //         document.write('*');
+        //         console.log('*');
+        //         star = star + '*';
+        //     }
+        //     document.write('<br>');
+        //  }
+
+
+         // 별찍기 연습문제_선생님
+         let stars = '';
+         let starCount = 1;
+
+         for(let line = 0; line < 10; line++)
+         {
+            // 별의 개수를 설정한다.
+            for(let k = 0; k < starCount; k++)
+            {
+                stars = stars + '*'; 
+                // stars +='*'; 와 같다.
+
+            }
+            
+            // 별을 로그에 찍는다.
+            console.log(stars);
+
+            // 별을 html 문서에 찍는다.
+            document.body.innerHTML += stars;
+            document.body.innerHTML += '<br>';
+
+            starCount++;
+            stars = '';
+         }
+
+
+
+    </script>
+</body>
+</html>

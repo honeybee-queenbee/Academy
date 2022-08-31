@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>ID : <input type="text"></label><br>
+        <label>PW : <input type="password"></label>
+        <br><br>
+        <textarea cols="30" rows="10"></textarea>
+        <br>
+        <label for="name">What's you name?</label>
+        <select id="name">
+            <option value="양지원">양지원</option>
+            <option value="지원이">지원이</option>
+            <option value="도로시">도로시</option>
+        </select>
+    </form>
+    <br><hr><br>
+    <form method="get">
+        <label>아이디 <input type="text" name="user_id"></label><br>
+        <label>패스워드 <input type="password" name="user_pw"></label><br>
+        <input type="checkbox" name="keep">로그인 유지<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="로그인">
+    </form>
+    <br><hr>
+    <h3>강아지세계</h3>
+    <form method="get">
+        <label>강아지 종류<br>
+            <select name="browser">
+                <option value="말티즈">말티즈</option>
+                <option value="시바견">시바견</option>    
+                <option value="골든리트리버">골든리트리버</option>           
+            </select>
+        </label><br>
+        <label>강아지 생일<br>
+                <input type="date" name="birth" value="2022-07-21">
+        </label><br>
+        <label>강아지 색상<br>
+            <input type="color" name="color" value="fa3770">
+        </label><br>
+        <label>주인 이메일 주소<br>
+            <input type="email" placeholder="address@dog.com">
+        </label><br>
+        <label>주인 전화번호<br>
+            <input type="tel" name="phone" placeholder="010-0000-0000">
+        </label><br>
+        <label>주인 SNS 계정<br>
+            <input type="url" name="homepage" placeholder="cutedog.domain.com">
+        </label><br>
+        <input type="submit" value="저장">
+    </form>
+
+</body>
+</html>

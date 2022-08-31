@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>        
+        const max = 5;         // 데이터 개수의 최대치       
+        const stack = [];       // 스택 자료구조        
+        let SP = 0;             // Stack Pointer        
+        let count = 0;
+        
+        // null을 리턴한경우 stack full;
+        const push = function(data)
+        {
+            if (count === max)
+            {                
+                return false;
+            }
+
+            stack[SP] = data;
+            count++;
+            SP++;
+
+            return true;
+
+        }
+
+        // state === EMPTY, null
+        const pop = function()
+        {
+            if (count === 0)
+            {
+                return null;
+            }
+
+            SP--;
+            count--;
+            return stack[SP];
+        }
+
+        const printStack = function()
+        {
+            let a = [];
+            for (let i = 0; i < count; i++)
+            {
+                a.push(stack[i]);
+            
+            }
+
+            console.log(a.join());
+
+        }
+
+        console.log(push({a:1}));        
+        console.log(push(22));        
+        console.log(push(33));
+        console.log(push(44));        
+        console.log(push(55));
+        console.log(push(66));
+
+        console.log(pop());
+        console.log(pop());
+        console.log(pop());
+        console.log(pop());
+        console.log(pop());
+        
+        console.log(pop());
+
+        
+    </script>
+    
+</body>
+</html>

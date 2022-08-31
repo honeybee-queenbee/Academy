@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+
+        // 복습 연습문제
+        // max(1, 2, 3, 4) 형태와 max([1, 2, 3, 4]) 형태를
+        // 모두 처리 할 수 있는 max 함수를 만드세요.
+        // max(4, 6, 2)
+        // max() null
+        // max([]) null
+        const max = function(...ar)
+        {
+            let maxValue = 0;
+                        
+            const calcMax = function(ar)
+            {
+                let maxValue = ar[0];
+
+                for (let i = 1; i < ar.length; i++)
+                {
+                    if (maxValue < ar[i])
+                    {
+                        maxValue = ar[i];
+                    }
+                }
+
+                return maxValue;
+            }
+
+            // 가드코드 보호해준다.
+            if ((ar.length === 0) || (ar[0].length === 0))
+            { 
+                return null;
+            }
+
+            if (typeof(ar[0]) === 'number')
+            {
+                maxValue = calcMax(ar); // ar의 수 중에서 최댓값 나와서 들어간다.
+                
+            }
+            else if(Array.isArray(ar[0]) === true) // 만약 첫번째 인자가 배열이라면
+            {
+                maxValue = calcMax(ar[0]); // ar의 배열 중 첫번째 그룹에서 최댓값 구하기
+            }
+            else
+            {
+                maxValue = null;
+
+            }
+
+            return maxValue;            
+        }
+
+        console.log(max([1, 2, 3])); // 파라미터 한개야
+        console.log(max(22, 1, 3)); // 파라미터 세개야
+                         
+        // ---------------------------------------------------------------------------------
+
+
+        // foreach call back 함수 : 배열의 개수만큼 반복되어 출력된다. ==> for문이랑 같네?
+        const num = [11, 22, 33, 44, 55];
+
+        const printArray = function(value, index)
+        {
+            console.log('value = ' + value);
+            console.log('index = ' + index);
+        }
+
+        num.forEach(printArray);
+        
+
+        // foreach 사용해서 구구단 2단 만들기
+
+        const num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        const printArray = function(value)
+        {
+            console.log(`2 x ${value} = ${2 * value}`); // 실행이 length만큼 반복된다.
+        }
+
+        num.forEach(printArray);
+
+        // 위의 foreach 문을 for문으로 쓸 수 있다! (사실 대부분 for문으로 써^^)
+      
+        const num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        for (let i = 0; i < num.length; i++) // = for(let value of num)과 동일 
+        {
+            console.log(`2 x ${num[i]} = ${2 * num[i]}`); // 실행이 length만큼 반복된다.
+        }
+
+        //-----------------------------------------------------------------------------------   
+        
+        // map 
+        const num = [1, 2, 3, 4, 5];
+
+        const sq = function(value) // 호출한다.
+        {
+            // forEach와 다르게 return함. 호출하고 return된 값을 모아서 새배열 만들어서 던진다.
+            return value * value; 
+        }
+
+        const new_num = num.map(sq) 
+        
+        console.log(new_num);
+        
+        //-----------------------------------------------------------------------------------   
+        
+        // [map 연습문제] 각 영웅의 이름 앞에 '훌륭한'을 붙여서 출력하기
+
+        const hero = ['홍길동', '세종대왕', '김구', '안중근'];
+
+        const sq = function(value) // 호출한다.
+        {
+            return '훌륭한 ' + value; 
+        }
+
+        const new_hero = hero.map(sq) 
+        
+        console.log(new_hero);
+
+        //----------------------------------------------------------------------
+        // [map 연습문제] 선생님 풀이
+        const hero = ['홍길동', '세종대왕', '김구', '안중근'];
+
+        const new_hero = hero.map(function(value)
+        {
+            return '훌륭한 ' + value; 
+        });
+
+        console.log(new_hero);
+        
+       //-----------------------------------------------------------------------
+        // filter문 
+        const num = [11, 22, 33, 44, 55, 66, 77, 88, 99];
+
+        const new_num = num.filter(function(value)
+        {
+            if (value > 50)
+            {
+                return false;
+            }
+            
+            return true;
+
+
+        });
+
+        console.log(new_num); // 50보다 큰 애들만 필터링해서 새로운 배열을 출력한다.
+
+        
+       //---------------------------------------------------------------------------
+        // [filter 연습문제 1] 짝수만 리턴하는 필터함수 짜기
+
+        const num = [11, 22, 33, 44, 55, 66, 77, 88, 99];
+
+        const new_num = num.filter(function(value)
+        {
+            if (value%2 === 0)
+            {
+                return true;
+            }
+        });
+
+        console.log(new_num); 
+        
+        // [filter & map 연습문제 2] 홀수만 리턴해서 두배 만드는 필터함수 짜기 
+    
+        const num = [11, 22, 33, 44, 55, 66, 77, 88, 99];
+
+        
+        const new_num = num.filter(function(value)
+        {
+            if (value%2 === 1)
+            {
+                return true;
+            }
+
+        });
+
+        const new_num2 = new_num.map(function(value)
+        {
+            return (value * 2);
+        });
+
+        console.log(new_num2); 
+        
+
+        // 위 코드를 더 깔끔하게 정리해보자 :)
+        const num = [11, 22, 33, 44, 55, 66, 77, 88, 99];
+        
+        const odd = function(value){
+            if (value%2 === 1)
+            {
+                return true;
+            }
+        }
+        
+        const dble = function(value)
+        {
+            return (value * 2);
+        }
+        
+        // 아래와 같은 식이 많이 쓰인다! 홀수로 필터 걸고 더블 걸었구나! 알 수 있음.
+  //      num.filter(odd).map(dble);
+        
+        // ----------------------------------------------------------------------
+
+        // Arrow 함수
+
+        // function을 지우고 화살표(==>)로 쓰겠다!
+        // return 지우면서 {}도 같이 죽여
+        // return 지우면서 expression 되었으니 ;까지 삭제.
+        const res = num.filter(odd).map((value)=> 2 * value);
+        const res = num.filter(odd).map(function(value){return 2 * value};);
+
+        console.log(res);
+
+        // ----------------------------------------------------------------------
+        // [setTimeout] 5000 ms(5초 후) 함수 실행.
+        setTimeout(() => {console.log("첫 번째 메시지")}, 5000);
+
+        // 위와 같은 의미
+        const func = function()
+        {
+            console.log("~~~~~~");
+        }
+
+        setTimeout(func, 5000);
+
+        // [setInterval] 1초마다 실행해라
+        setInterval(func, 1000);
+
+        const timer ID = setInterval(func, 1000);
+
+        // ----------------------------------------------------------------------
+        */       
+        // 1000ms = 1초
+        // setTimeout 해서 5초(5000 ms) 뒤에 함수 실행
+        const func = function()
+            {
+                console.log("~~~~");
+            }
+        
+
+        // setTimeout(func, 5000) 해서 1초마다 실행
+        // setInterval(func, 1000);
+
+        // 1초마다 실행하다가 5초 후에 멈춰라
+        const timerID = setInterval(func, 1000);
+
+        setTimeout(() =>{
+            console.log("kill timer");
+            clearInterval(timerID);
+        }, 5000); // 여기서 5000(5초)라고 설정한 시간은 딱 5초에 해주겠다는 아니다. 
+                  // 정확한 시간은 아니지만 최대한 그 시간에 맞추겠다라는 의미다. (best effort라고 부른다)
+
+
+    </script>
+</body>
+</html>

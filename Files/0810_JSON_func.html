@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*
+    (function(){
+        // new 연산자 : 새로운 연산자를 만들 수 있다! 값을 받아서 결과만 뱉으면 됨(마치 함수같은 것)
+        // heap에 올라간 ref값을 리턴 new 객체형 (Data-Type)
+        const today = new Date(); // 괄호가 필요한 이유? : 
+
+        console.log(today.getMonth()); // 7 : 0부터 1월
+        console.log(today.getDay()); // 3 : 0부터 일요일
+
+    })();
+    
+   //---------------------------------------------------------------------------------------------
+   (function(){
+
+    Number.prototype.zegop = function() {
+        let val = this.valueOf();
+
+        return val * val;
+    }
+
+    const a = 30;
+    console.log(a.zegop());
+
+    let b = 20;
+    console.log(b.zegop());
+
+    const c = new Number(5);
+    console.log(c.zegop());
+
+   })();
+   
+   //---------------------------------------------------------------------------------------------
+   (function(){
+
+    let a = [11, 11, 33, 44, 55];
+    
+    // Array.prototype.indexOf() : arrray 객체가 공통적으로 갖고있는 indexof
+    console.log(a.indexOf(11)); // 0 : 첫번째 요소인 11을 찾고 그만둔다.
+    console.log(a.indexOf(44)); // 3 : 네번째 요소인 44를 찾고 그만둔다.
+    console.log(a.indexOf(574)); // -1 : 존재하지 않으면 -1을 반환한다.
+
+    let s = '동해물과 백두산이 마르고 닳도록';
+
+    console.log(s.indexOf('물과')); // 2 : 세번째 글자에서 찾음
+    console.log(s.indexOf('두산')); // 6 : 일곱번째 글자에서 찾음(띄어쓰기도 한글자!)
+    console.log(s.indexOf('도로시')); // -1 : 존재하지 않음
+
+    console.log(a.hasData(11));
+
+
+   })();
+   
+   //------------------------------------------------------------------------------------------------
+   // 
+   (function(){
+
+    let a = [11, 11, 33, 44, 55];   
+
+    Array.prototype.hasData = function(value)
+    {
+        if(-1 === this.indexOf(value))
+        {
+            return false;
+        }
+
+        return true;
+    }
+
+    console.log(a.hasData(33));
+    
+    let b = [];
+    console.log(b.hasData(42));
+         
+    })();
+    
+   //------------------------------------------------------------------------------------------------
+    // JSON
+   
+   (function(){
+        const student = [
+            {
+                name : '도로시',
+                age : 21,
+                married : false
+            },
+            {
+                name : '이순신',
+                age : 43,
+                married : true
+            },
+    
+        ];
+
+        // 
+        console.log(JSON.stringify(student));
+        console.log(JSON.stringify(student, null, 2));
+
+        // 다시 객체화 시키기
+        const jsonInfo = JSON.stringify(student);
+        console.log(JSON.parse(jsonInfo))
+
+        const jsonObj = JSON.parse(jsonInfo);
+        console.log(jsonObj[0].name);
+        console.log(jsonObj[0].age);
+
+    })();
+     
+   //------------------------------------------------------------------------------------------------
+    // JSON
+    (function(){
+        let t = 0;
+        let k = 0;
+
+        for(let i = 0; i < 10; i++)
+        {
+            // 0.0000 ~ 9.9999 * 10 = 0.1 ~ 9.9
+            t = Math.random() * 10;
+            console.log(t);
+
+            // 1 ~ 10
+            k = Math.floor(t) + 1;
+            console.log(k);
+        }
+        
+    })();
+
+    
+   //------------------------------------------------------------------------------------------------
+    // 로또번호 생성하는 함수 만들기 [Dorothy]
+    // 1~45 사이의 랜덤값 6개
+
+    (function(){
+        let lotto = [];
+        
+        let i = 0;
+        let j = 0;
+
+        for(let i = 0; i < 6; i++)
+        {
+            let num = Math.floor(Math.random() * 45) + 1;
+
+            for(let j in lotto)
+            {
+                if(num == lotto[j])
+                {
+                    num = Math.floor(Math.random() * 45) + 1;
+                }
+            }         
+            lotto.push(num);
+
+        }
+        document.write(lotto);
+
+    })();
+
+    */
+   //------------------------------------------------------------------------------------------------
+
+
+
+    </script>
+</body>
+</html>

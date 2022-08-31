@@ -1,0 +1,25 @@
+@charset 'utf-8';
+
+html{
+    font-size: 14px;
+}
+
+.main_title {
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+.main_contents{
+    display: grid;
+    grid-template-columns: 180px 1fr;
+
+}
+
+.local_nav{
+    border-right: 1px solid gray;
+}
+
+.local_contents{
+    padding-left: 10px;
+}

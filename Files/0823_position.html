@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .grandparent {
+            position: absolute;
+            left: 100px;
+            top: 100px;
+
+            border: 6px solid black;
+        }
+
+        .parent{
+            border: 6px solid red;
+
+        }
+
+        .child{
+            position:fixed;
+            border: 6px solid rgb(246, 255, 0);
+
+            /*absolute는 부모로부터 완전히 독립
+            크기를 지정.*/
+            height: 30px;
+            width: 700px;
+
+            left: 100px;
+            top: 100px;
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="grandparent">
+        GRANDPARENT
+        <div class="parent">
+            PARENT
+            <div class="child">
+                CHILD
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

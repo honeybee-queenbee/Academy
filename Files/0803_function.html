@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // function prototype(함수원형) = 함수를 사용하는데 필요한 모든 정보
+        // const add = function(val1, val2)
+        
+        // {
+        //     let result = val1 + val2;
+        //     return result;
+
+        // }      
+        // // 위에 들어가있는 영역과 들어가있지 않은 영역은 완전히 다른영역이다.
+
+        // let result; 
+        // result = add(10,20);
+        
+        // console.log(result);
+
+        //---------------------------------------------------------------------
+        // 함수를 사용해서 구구단 짜기
+        // 함수 기본식
+        // const gugudan = function(dan)
+        // {
+        //     let mul =1;
+        //     for(let i = 0; i < 9; i++)
+        //    {
+        //     console.log(`${dan} x ${mul} = ${dan * mul}`);
+        //     mul++;
+        //    }
+        // }
+
+        // // 호출하기
+        // gugudan (5);
+
+
+        //---------------------------------------------------------------------
+        
+        // // 사용자한테 숫자를 하나 입력받는다.
+        // // 1 ~ 숫자까지 더하는 코드를 작성
+        // // ex) 5, 1+2+3+4+5
+        // // 단, 1+...+n 더하는 기능은 함수로 구현.
+
+        // // 도로시 완성본
+        // const input = prompt('숫자를 입력해주세요.','');
+        // const num = Number(input);
+        
+        // const addall = function(num)
+        // {
+        //     let a = 0;
+        //     let sum = 0;
+
+        //         while(a <= num + 1)
+        //         {
+        //             sum = sum + a;
+        //             a = a + 1;
+
+        //         }
+
+        //     console.log(`1부터 ${num}까지 정수의 합은 ${sum}입니다.`);
+        // }
+        // addall(num);
+
+
+        // ---------------------------------------------------------------------
+        // // 선생님 완성본
+
+        // const sigma = function(val)
+        // {
+        //     let total = 1;
+        //     let inc = 2;
+
+        //     for(let i = 0; i < (val - 1); i++)
+        //     {
+        //         total = total + inc;
+        //         inc++;
+        //     }
+        //     return(total);
+        // }
+
+
+        // // 숫자를 하나 입력받는다.
+        // const input1 = prompt('숫자를 입력하세요','');
+        // const num1 = Number(input1);
+
+
+        // // sigma(입력받은숫자)를 호출한다.
+        // let res = sigma(1);
+        // console.log(res);
+
+        // res = sigma(2);
+        // console.log(res);
+
+        // res = sigma(3);
+        // console.log(res);
+
+        // res = sigma(4);
+        // console.log(res);
+
+        //---------------------------------------------------------------------
+        // // 세개의 숫자를 더하는 함수를 만들어본다.
+        
+        // const add = function(val1, val2)
+        // {
+        //     return val1 + val2;
+        // }
+        
+        // const add3 = function(val1, val2, val3)
+        // {
+        //     let a1 = add(val1, val2);
+        //     let result = add(a1, val3); // 함수가 함수를 호출할 수 있다.
+        //     return result;
+
+        //     // 위 세줄을 아래 한줄로 요약할 수 있음
+        //     // return add(add(val1, val2), val3);
+
+        // }
+
+        // let result = add3(1, 4, 5);
+        // console.log(result);
+
+        //---------------------------------------------------------------------
+        
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학생 성적</title>
+
+    <style>
+        h1{
+            border-bottom: 1px solid gray;
+            padding-top : 0px;
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+        }        
+        
+        table{
+            text-align: center;
+        }
+
+    </style>
+    
+</head>
+
+<body>
+    <h1>
+        학생 성적
+    </h1>
+
+    <table border = "1">
+        <tr>
+            <th>구분</th>
+            <th>국어</th>
+            <th>영어</th>
+            <th>수학</th>
+        </tr>
+        <tr>
+            <td>1학년1학기</td>
+            <td>80</td>
+            <td>90</td>
+            <td>74</td>
+        </tr>
+        <tr>
+            <td>1학년2학기</td>
+            <td>84</td>
+            <td>94</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>2학년1학기</td>
+            <td>80</td>
+            <td>90</td>
+            <td>88</td>
+        </tr>
+        <tr>
+            <td>2학년2학기</td>
+            <td>82</td>
+            <td>86</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>3학년1학기</td>
+            <td>92</td>
+            <td>80</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>3학년2학기</td>
+            <td>70</td>
+            <td>80</td>
+            <td>88</td>
+        </tr>
+    </table>
+    
+    <script>
+        //요구사항-2 : 학생성적을 배열로 구현하시오. (JS 이용)
+        // 요구사항-3 : 아래와 같은 양식으로 과목별 총점과 평균성적을 출력하는 JS코드를 만드시오 
+        // (<ul>, <li> 이용하여 화면으로 결과를 출력하시오.)
+        const score = [[80, 84, 80, 82, 92, 70],
+                       [90, 94, 90, 86, 80, 80],
+                       [74, 80, 88, 90, 80, 88]];
+        const kor = score[0];
+        const eng = score[1];
+        const math = score[2];
+
+        let sumkor = (kor[0] + kor[1] + kor[2] + kor[3] + kor[4] + kor[5]);
+        let sumeng = (eng[0] + eng[1] + eng[2] + eng[3] + eng[4] + eng[5]);
+        let summath = (math[0] + math[1] + math[2] + math[3] + math[4] + math[5]);
+
+        let avgkor = Math.round((kor[0] + kor[1] + kor[2] + kor[3] + kor[4] + kor[5]) / 6);
+        let avgeng = Math.round((eng[0] + eng[1] + eng[2] + eng[3] + eng[4] + eng[5]) / 6);
+        let avgmath = Math.round((math[0] + math[1] + math[2] + math[3] + math[4] + math[5]) / 6);
+
+        let result_kor = `국어 총점 : ${sumkor} 점, 평균 : ${avgkor} 점`
+        let result_eng = `영어 총점 : ${sumeng} 점, 평균 : ${avgeng} 점`
+        let result_math = `수학 총점 : ${summath} 점, 평균 : ${avgmath} 점`
+
+        // 요구사항-4 : 아래와 같은 양식으로 학기별 총점과 평균성적을 출력하시오 
+        // (<ul>, <li> 이용하여 화면으로 결과를 출력하시오.)
+
+        let sumhak_1_1 = (kor[0] + eng[0] + math[0]);
+        let sumhak_1_2 = (kor[1] + eng[1] + math[1]);
+        let sumhak_2_1 = (kor[2] + eng[2] + math[2]);
+        let sumhak_2_2 = (kor[3] + eng[3] + math[3]);
+        let sumhak_3_1 = (kor[4] + eng[4] + math[4]);
+        let sumhak_3_2 = (kor[5] + eng[5] + math[5]);
+
+        let avghak_1_1 = Math.round((kor[0] + eng[0] + math[0]) / 3);
+        let avghak_1_2 = Math.round((kor[1] + eng[1] + math[1]) / 3);
+        let avghak_2_1 = Math.round((kor[2] + eng[2] + math[2]) / 3);
+        let avghak_2_2 = Math.round((kor[3] + eng[3] + math[3]) / 3);
+        let avghak_3_1 = Math.round((kor[4] + eng[4] + math[4]) / 3);
+        let avghak_3_2 = Math.round((kor[5] + eng[5] + math[5]) / 3);
+
+        let result_avghak_1_1 = `1학년 1학기 총점 : ${sumhak_1_1} 점, 평균 : ${avghak_1_1} 점`
+        let result_avghak_1_2 = `1학년 2학기 총점 : ${sumhak_1_2} 점, 평균 : ${avghak_1_2} 점`
+        let result_avghak_2_1 = `2학년 1학기 총점 : ${sumhak_2_1} 점, 평균 : ${avghak_2_1} 점`
+        let result_avghak_2_2 = `2학년 2학기 총점 : ${sumhak_2_2} 점, 평균 : ${avghak_2_2} 점`
+        let result_avghak_3_1 = `3학년 1학기 총점 : ${sumhak_3_1} 점, 평균 : ${avghak_3_1} 점`
+        let result_avghak_3_2 = `3학년 2학기 총점 : ${sumhak_3_2} 점, 평균 : ${avghak_3_2} 점`
+
+        
+        //출력
+
+        document.body.innerHTML += `<ul>   
+            <li> ${result_avghak_1_1} </li>
+            <li> ${result_avghak_1_2} </li>
+            <li> ${result_avghak_2_1} </li>
+            <li> ${result_avghak_2_2} </li>
+            <li> ${result_avghak_3_1} </li>
+            <li> ${result_avghak_3_2} </li>
+            
+            </ul>`
+
+        document.body.innerHTML += `<ul>   
+            <li> ${result_kor} </li>
+            <li> ${result_eng} </li>
+            <li> ${result_math} </li>
+            </ul>`        
+        
+    </script>
+
+</body>
+</html>

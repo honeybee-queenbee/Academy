@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .cls-div {
+            width : 200px;
+            height : 200px;
+            background-color: cadetblue;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class = "cls-div" id = "id-div">
+
+    </div>
+
+    <script>
+        const aaa = function(){
+
+            let divElement = document.querySelector('div');
+
+        // divElement를 클릭하면 메시지 박스가 뜬다.
+        const onClick = function()
+        {
+            alert("응 눌렀어~");
+
+        }
+
+        // 등록하기 click은 약속된 명령이야! // 제일 중요
+        divElement.addEventListener('click', onClick);
+
+        }
+
+        // DOMContent를 다 읽었을 때 어떤 함수를 호출해라.
+        document.addEventListener('DOMContentLoaded', aaa);
+
+    </script>
+</body>
+</html>

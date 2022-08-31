@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 1번 문제 : 숫자를 입력받아 짝수인지 홀수인지 판단하는 코드
+        // 입력
+        // prompt로 숫자를 하나 받는다.
+        const input = prompt('숫자를 입력하세요','');
+        const num = Number(input);
+        let message;
+
+        // 처리
+        // 짝수냐 아니냐로 판단한다.
+        if(0 === (num % 2))
+        {
+            message = num + "은 짝수입니다."
+        }
+
+        else
+        {
+            message = num + "은 홀수입니다."
+        }
+
+        // 출력
+        alert(message);
+
+        
+        // 2번 문제 : 세개의 숫자를 입력받아 가장 큰 수를 찾는 코드
+        //입력
+        const input1 = prompt('첫번째 숫자를 입력하세요.','');
+        const input2 = prompt('첫번째 숫자를 입력하세요.','');
+        const input3 = prompt('첫번째 숫자를 입력하세요.','');
+
+        const num1 = Number(input1);
+        const num2 = Number(input2);
+        const num3 = Number(input3);
+
+        let MAX;
+
+        //처리
+        //1. 두 수를 비교한다.
+        if (num1 > num2)
+        {
+            // 2. 두 수중 큰 수와 남은수를 비교한다.
+            if(num1 > num3)
+            {
+                MAX = num1;
+            }
+            else
+            {
+                MAX = num3;
+            }
+        }
+        else
+        {
+            if(num2 > num3)
+            {
+                MAX = num2;
+            }
+            else{
+                MAX = num3;
+            }
+        }
+ 
+        //출력
+        alert("가장 큰 수는" + MAX + "입니다.");
+
+        
+
+
+        
+
+    </script>
+</body>
+</html>

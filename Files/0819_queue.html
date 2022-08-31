@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // queue 데이터 구조.
+        const queue = [];    
+
+        // 최대 데이터 개수.
+        const max = 5;
+
+        // 몇개 데이터가 있는가?
+        let count = 0;
+
+        // rear : push-pointer
+        let rear = 0;
+
+        // front : pop-pointer
+        let front = 0;
+
+        const enqueue = function(data)
+        {
+            if (count === max)
+                return false;
+
+            // queue에다 데이터를 넣어준다.
+            rear = rear % max;           
+            
+            queue[rear] = data;
+            count++;                     
+            rear++;
+            
+            return true;
+            
+        }
+
+        const dequeue = function()
+        {
+            let result;
+            if (count === 0)
+                return false;
+
+            front = front % max;
+            result = queue[front];
+            count--;
+            front++;
+            
+            return result;
+        
+        }
+
+
+
+
+
+
+
+
+        enqueue(11);
+        enqueue(22);
+        enqueue(33);
+
+        console.log(dequeue());
+        console.log(dequeue());
+             
+
+        enqueue(44);
+        enqueue(55);
+        enqueue(66);
+        enqueue(77);
+
+        console.log(dequeue());
+        console.log(dequeue());
+        console.log(dequeue());
+        console.log(dequeue());
+        console.log(dequeue());
+        
+
+
+        
+        
+
+
+
+
+    </script>
+    
+</body>
+</html>

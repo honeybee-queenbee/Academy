@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        //1번 문제 : 숫자를 입력받아 짝수인지 홀수인지 판단하는 코드
+        //입력
+        let input = prompt('숫자를 입력해주세요.','');
+        const num = Number(input);
+
+        //처리
+        if(num%2 === 0)
+        {
+            alert('짝수입니다.');
+        }
+
+        else
+        {
+            alert('홀수입니다.');
+        }
+
+        //출력
+        console.log(input);
+        */
+        
+        //2번 문제 : 세개의 숫자를 입력받아 가장 큰 수를 찾는 코드
+        //입력
+        let input1 = prompt('숫자를 입력해주세요1.','');
+        let input2 = prompt('숫자를 입력해주세요2.','');
+        let input3 = prompt('숫자를 입력해주세요3.','');
+        const num1 = Number(input1);
+        const num2 = Number(input2);
+        const num3 = Number(input3);
+
+        //처리
+        let max = Math.max(num1, num2, num3);
+
+        //출력
+        alert('가장 큰 수는' + max + '입니다.');
+        
+
+        //3번 문제 : 세개의 숫자를 입력받아 중간수를 찾는 코드
+        //입력
+        let input4 = prompt('숫자를 입력해주세요4.','');
+        let input5 = prompt('숫자를 입력해주세요5.','');
+        let input6 = prompt('숫자를1 입력해주세요6.','');
+        const num4 = Number(input4);
+        const num5 = Number(input5);
+        const num6 = Number(input6);
+
+        //처리
+        let big = Math.max(num4, num5, num6);
+        let small = Math.min(num4, num5, num6);
+        let mid = (num4 + num5 + num6)-big - small;
+
+        //출력
+
+        alert('중간 수는' + mid + '입니다.');
+
+
+    </script>
+</body>
+</html>

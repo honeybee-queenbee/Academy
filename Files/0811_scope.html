@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        // [scope 1]
+        // 전역영역에 올린 변수들은 
+        // 1. 어디에서나 접근가능.
+        // 2. let, var, const 차이가 없음
+
+        // 따라서 스코프는 지역영역에서 
+        // 해석하는 방식을 중점적으로 학습!
+        let gValue1 = 100;
+
+        const f1 = function()
+        {
+            console.log('f1()' + gValue1);
+        }
+
+        console.log(gValue1);
+
+        //----------------------------------------
+        // [scope 2]
+        // 전역변수와 지역변수가 이름(식별자)이
+        // 같은 경우 가까이에 있는 식별자가
+        // 먼저 해석됨
+        let gValue1 = 100;
+
+        const f1 = function()
+        {
+            let gValue1 = 200;
+            console.log('f1()' + gValue1);
+        }
+
+        f1();
+
+        
+        //----------------------------------------
+        // [scope 3]
+        // 지역 변수내에서 var와 let(const)은 차이가 있음
+        // let, const : 블록 레벨 스코프
+        const f1 = function()
+        {
+            console.log(i);
+            // let으로 선언된 것은 함수로 갖고있는게 아냐!
+            for (let i = 0; i < 5; i++)
+            {
+                // 아래애는 이 블록 레벨 안에서만 유효하다.
+                console.log(i);
+            }
+
+            // ERROR 발생, let 이나 const는 블록 레벨 스코프이다.
+        }
+
+        f1();
+
+        // var : 함수 레벨 스코프(접근이 다 가능)
+        // 호이스팅이란?
+        // : v8엔진이 var로 선언된 것이 있는지 미리본다.-> 일단 메모리에 올린다.
+        // 
+                
+        const f2 = function()
+        {
+            
+            for (var i = 0; i < 5; i++)
+            {
+                
+            }
+
+            console.log(i);
+        }
+
+        f2();
+        
+        //----------------------------------------------------------------------
+        // [scope 4]
+        // 호이스팅
+
+        console.log(v); // undefined
+        // 초기화 하기 전 접근 불가능
+        console.log(l); // error : initialization 하기 전에 접근 불가능
+
+        var v = 10;
+        let l = 20;
+        
+        //-------------------------------------
+        
+        f1(); // ES5-f1()
+        f2(); // error : (ES6의 방식은 호이스팅의 방식이 아님)
+        
+        // ES5의 함수는 호이스팅의 대상이다.
+        function f1()
+        {
+            console.log('ES5-f1()');
+        }
+        
+        // ES6 버전은 만들기 전에 호출하지 못해.
+        const f2 = function()
+        {
+            console.log('ES6-f2()');
+        }
+
+        */
+        //----------------------------------------------------------------------
+        // [scope 4]
+        
+            const f1 = function()
+            {
+                let a = 10;
+
+                const f2 = function()
+                {
+                    let a = 20;
+                    console.log(a);
+                }
+
+                f2();
+            }
+
+            f1();
+
+
+    </script>
+    
+</body>
+</html>

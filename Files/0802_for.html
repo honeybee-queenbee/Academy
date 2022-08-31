@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        for(let i = 0; i < 9; i++)//변수의 선언과 초기화, 조건식, 증감식
+        {
+            console.log(i);
+
+        } // {JS 코드}
+        
+
+        for(let i = 2; i < 7; i++)
+        {
+            console.log(i);
+        }
+                
+
+        for(let i = 1; i <=5; i++)
+        {
+            console.log(i);
+        }
+        
+
+        // 멍청코드
+        for (let i = 0; i < 9; i++)
+        {
+            console.log("2x" + (i+1) + "=" + (i+1)*2);
+        }
+        
+        
+        // 좋은코드 (변수 따로 설정)
+        let num = 1;
+        for (let i = 0; i < 9; i++)
+        {
+            console.log("2x" + num + "=" + 2 * num);
+            num = num + 1;
+        }
+
+
+       // 좋은코드를 IPO 관점으로 다시보기
+       let multiple = 1;
+       let dan = 2;
+
+       //처리
+        for (let i = 0; i < 9; i++)
+        {
+            //출력
+            console.log(dan + "x" + multiple + "=" + (dan * multiple));
+            multiple = multiple + 1;
+        }
+        
+
+        let dan;
+
+        for (dan = 2; dan <= 9; dan++) 
+        {
+            for (i = 1; i <= 9; i++) 
+            {
+                console.log(dan + "*" + i + "=" + dan*i);
+            }
+        }
+        
+
+        // 구구단 전체 출력 연습
+        let i = 2;
+        let j = 1;
+        let sum = i*j;
+        
+        for(i=2; i<=9; i++) //(초기식, 조건식, 증감식)
+        {
+            for(j=1; j<=9; j++)
+            {
+                sum = i * j;
+                console.log(i + " x " + j + " = " + sum);
+                
+            }
+        }
+        */
+
+    
+
+        // 구구단 전체 출력_선생님
+
+        let dan = 2; 
+        let mul = 1;
+
+        
+        for (let i = 0; i < 8; i++) // 1. 총 8번 돈다(2단~9단)
+        {
+
+            for (let k = 0; k < 9; k++) // 2. n단 안에서 9번 돈다(1~9)
+            {
+                console.log(dan + 'x' + mul + '=' + (dan*mul));
+                mul++;
+            }
+
+            dan = dan + 1;
+            mul = 1;
+        }
+
+        
+
+
+    </script>
+</body>
+</html>

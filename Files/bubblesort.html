@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    (()=>{
+        const bubbleSort = function(asc, ...ar)
+        {
+            let arr;
+            let temp;
+
+            // 한줄을 비교할때마다 스왑이 된지 파악한다.
+            let swapFlag = false;
+
+            if (typeof(ar[0]) === 'number')
+            {
+                arr = ar;
+            }
+            else if (Array.isArray(ar[0]))
+            {
+                arr = ar[0];
+            }
+            else
+            {
+                return null;
+            }
+
+            for (let i = 0; i < arr.length - 1; i++)
+            {
+                
+                for (let k = 0; k < arr.length - 1 - i; k++)
+                {
+                    // 오름차순
+                    if (asc === true)
+                    {
+                        if (arr[k] > arr[k + 1])
+                        {
+                            temp = arr[k];
+                            arr[k] = arr[k + 1];
+                            arr[k + 1] = temp;                           
+
+                            swapFlag = true;
+
+                        }
+
+
+                    }
+                    else // 내림차순.
+                    {
+                        if (arr[k] < arr[k + 1])
+                        {
+                            temp = arr[k];
+                            arr[k] = arr[k + 1];
+                            arr[k + 1] = temp;                           
+
+                            swapFlag = true;
+                            
+                        }
+
+
+                    }
+
+
+
+                }
+
+                if (swapFlag === false)
+                {
+                    console.log("break " + i);
+                    break;
+                }
+                else
+                {
+                    swapFlag = false;
+
+                }
+
+            }
+
+            return arr;
+
+        }
+            
+        let res = bubbleSort(true, 1, 3, 4, 2, 5);
+
+        console.log(res);
+
+
+
+    })();
+    </script>
+    
+</body>
+</html>

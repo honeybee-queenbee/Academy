@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //하나도 제거하지 않고, 2번 인덱스에 "drum" 추가
+        let myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+        let removed = myFish.splice(2, 0, 'drum');
+
+        console.log(myFish); // (5) ['angel', 'clown', 'drum', 'mandarin', 'sturgeon']
+
+
+        //하나도 제거하지 않고, 2번 인덱스에 "drum"과 "guitar" 추가
+        let myFish1 = ['angel', 'clown', 'mandarin', 'sturgeon'];
+        let removed1 = myFish1.splice(2, 0, 'drum', 'guitar');
+
+        console.log(myFish1); // (6) ['angel', 'clown', 'drum', 'guitar', 'mandarin', 'sturgeon']
+
+
+        //3번 인덱스에서 한 개 요소 제거
+        let myFish2 = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon'];
+        let removed2 = myFish2.splice(3, 1);
+
+        console.log(myFish2); // (4) ['angel', 'clown', 'drum', 'sturgeon']
+
+
+        //2번 인덱스에서 한 개 요소 제거하고 "trumpet" 추가
+        let myFish3 = ['angel', 'clown', 'drum', 'sturgeon'];
+        let removed3 = myFish3.splice(2, 1, 'trumpet');
+
+        console.log(myFish3); // (4) ['angel', 'clown', 'trumpet', 'sturgeon']
+
+
+        //0번 인덱스에서 두 개 요소 제거하고 "parrot", "anemone", "blue" 추가
+        let myFish4 = ['angel', 'clown', 'trumpet', 'sturgeon'];
+        let removed4 = myFish4.splice(0, 2, 'parrot', 'anemone', 'blue');
+        
+        console.log(myFish4); // (5) ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon']
+
+
+        //2번 인덱스에서 두 개 요소 제거
+        let myFish5 = ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon'];
+        let removed5 = myFish5.splice(myFish.length - 3, 2);
+
+        console.log(myFish5); // (3) ['parrot', 'anemone', 'sturgeon']
+
+
+        //-2번 인덱스에서 한 개 요소 제거
+        let myFish6 = ['angel', 'clown', 'mandarin', 'sturgeon'];
+        let removed6 = myFish6.splice(-2, 1);
+
+        console.log(myFish6); // (3) ['angel', 'clown', 'sturgeon']
+
+
+        //2번 인덱스를 포함해서 이후의 모든 요소 제거
+        let myFish7 = ['angel', 'clown', 'mandarin', 'sturgeon'];
+        let removed7 = myFish7.splice(2);
+
+        console.log(myFish7); // (2) ['angel', 'clown']
+
+
+        const a = [10, 20, 30, 'abc', false, 3.14, [1, 2, 3]];
+        console.log(a);
+
+        
+        // 구분	국어	영어	수학
+        // 1학년 1학기	80	90	90
+        // 1학년 2학기	85	90	90
+        // 2학년 1학기	88	95	92
+        // 2학년 2학기	90	90	88
+        // 3학년 1학기	88	89	96
+        // 3학년 2학기	90	89	96
+
+        const score = [[80,90,90],
+                        [85,90,90],
+                        [88,95,92],
+                        [90,90,88],
+                        [88,89,96],
+                        [90,89,96]];
+        const hg_1 = score[0];
+
+        let avg1_1 = (hg_1[0] + hg_1[1] + hg_1[2]) / 3
+        // = ((score[0][0] + score[0][1] + score[0][2]) / 3)
+        console.log("1학년 1학기 평균 = " + avg1_1);
+
+    
+
+    </script>
+</body>
+</html>
